@@ -1,0 +1,11 @@
+GET /tarefa/?idResp=(id do responsável) : listar todas as tarefas de um responsável
+
+PUT /(tarefa ou responsavel)/(id do responsável ou da tarefa) : alterar dados
+{
+    "(atributo a ser alterado)" : "(alteracao)",
+    
+} 
+
+GET /tarefa/?idResp=(id do responsável)&concluida=false : listar tarefas pendentes de um responsável
+
+GET /responsavel/?listarsempendencias=true : listar responsáveis sem tarefas pendentes
