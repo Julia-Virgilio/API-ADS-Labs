@@ -3,7 +3,8 @@ const service = require("../services/responsavel")
 function list(req, res){
     service.list(req.query).then((responsaveis) => {
         return res.send({ responsáveis: responsaveis })
-    }) 
+    
+    })
 }
     
 async function create(req, res) {

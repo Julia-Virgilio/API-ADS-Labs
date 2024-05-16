@@ -48,7 +48,8 @@ function temconcluida(req, res, next){
     return next()
 }
 
-function tarefaExpirada(req, res, next){
+function tarefaExpirada(req, res, next){    
+    if(req.body.concluida){
     const tarefaId = req.params.id
 
     Tarefa.findByPk(tarefaId).then(tarefa => {
@@ -61,6 +62,9 @@ function tarefaExpirada(req, res, next){
     })
 
     next()
+    } else{
+        next()
+    }
 }
 
 module.exports = { verificarNome, verificarData, temconcluida, temdata_limite, temtitulo, tarefaExpirada }
