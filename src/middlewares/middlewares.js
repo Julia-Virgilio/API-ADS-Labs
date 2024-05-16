@@ -60,8 +60,6 @@ function tarefaExpirada(req, res, next){
             return res.status(400).send({ message: "Não é permitido marcar a tarefa como concluída após a data limite" });
         }
     })
-
-    next()
     } else{
         next()
     }
