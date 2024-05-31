@@ -9,3 +9,5 @@ PUT /(tarefa ou responsavel)/(id do responsável ou da tarefa) : alterar dados
 GET /tarefa/?idResp=(id do responsável)&concluida=false : listar tarefas pendentes de um responsável
 
 GET /responsavel/?listarsempendencias=true : listar responsáveis sem tarefas pendentes
+
+GET /tarefa/?tarefaspendentes=(idResp) : listar tarefas pendentes de um usuario

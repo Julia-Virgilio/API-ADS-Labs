@@ -18,7 +18,6 @@ const Resp = database.define("responsaveis", {
     }
 })
 
-Resp.hasMany(Tarefa, { foreignKey: 'idResp' });
 Tarefa.belongsTo(Resp, { foreignKey: 'idResp' })
 
 module.exports = Resp

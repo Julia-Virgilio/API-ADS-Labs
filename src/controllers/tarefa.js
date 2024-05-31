@@ -27,6 +27,9 @@ async function update(req, res) {
 
         const tarefaEditada = await service.update(id, dados);
 
+        if(!tarefaEditada)
+            return res.status(404).send({ message: "Tarefa ou responsável não encontrados" });
+    
         res.send({
             message: "Tarefa atualizada com sucesso",
             tarefa: tarefaEditada
