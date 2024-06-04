@@ -7,7 +7,7 @@ function verificacao(req, res, next){
     if(!req.body.titulo) 
         return res.status(400).send({message: "Por favor insira o título da tarefa"})
 
-    if(!req.body.concluida) 
+    if(typeof req.body.concluida !== 'boolean') 
         return res.status(400).send({message: "Por favor insira se a tarefa foi concluída ou não (true ou false)"})
         
         next();
