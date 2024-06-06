@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    container_name: node-api
+    ports:
+      - "3000:3000"
+    environment:
+      - DB_HOST=db
+      - DB_USER=root
+      - DB_PASSWORD=senha
+      - DB_NAME=API
+      - DB_DIALECT=mysql
+      - DB_PORT=3306  
+      - PORT=3000
+    depends_on:
+      - db
+
+  db:
+    image: mysql:8.0
+    container_name: mysql-db
+    ports:
+      - "3307:3306" 
+    environment:
+      - MYSQL_ROOT_PASSWORD=senha
+      - MYSQL_DATABASE=API
+    volumes:
+      - db-data:/var/lib/mysql
+
+volumes:
+  db-data:
