@@ -9,9 +9,11 @@ Este projeto é o back-end de uma API de sistema CRUD,  desenvolvido como parte 
    git clone https://github.com/Julia-Virgilio/API-ADS-Labs
 2. Entre no diretório
 3. Instale as pendências
-   `npm install`
-4. Execute o projeto
-   `npm start`
+    ```bash
+   npm install
+5. Execute o projeto
+    ```bash
+   npm start
 
 ### Como a aplicação não possui frontend, será necessário uma aplicação para teste de APIs Rest
 
