@@ -20,28 +20,49 @@ Este projeto é o back-end de uma API de sistema CRUD,  desenvolvido como parte 
 ## Uso e funcionalidades
 
 1. Criação, edição e exclusão de tarefas e responsáveis;
-2. Modelo de tarefa:
+   
+3. Modelo de tarefa:
+   
    - Título (obrigatório);
+     
    - Descrição (opcional);
+     
    - Data limite (obrigatório, formato YYYY-MM-DD);
+     
    - Concluída (obrigatório)
-3. Modelo de responsável:
+     
+5. Modelo de responsável:
+   
    - Nome (obrigatório);
+     
    - Data de nascimento (obrigatório)
-5. Listagens especiais nas portas:
+     
+7. Listagens especiais nas portas:
+   
     Para listar todas as tarefas de um responsável:
+
    `GET /tarefa/?idResp=(id do responsável)`
+   
    Para listar tarefas pendentes de um responsável:
+
    `GET /tarefa/?idResp=(id do responsável)&concluida=false`
+   
    Para listar responsáveis sem tarefas pendentes:
+   
    `GET /responsavel/?listarsempendencias=true`
+   
    Para listar tarefas pendentes de um responsável:
+   
    `GET /tarefa/?tarefaspendentes=(idResp)`
 
 ## Tecnologias usadas:
+
 - Node.js
+  
 - Docker
+  
 - MySQL
+  
 
 ## Autor:
 Desenvolvido por [Júlia Carvalho](https://github.com/Julia-Virgilio)
